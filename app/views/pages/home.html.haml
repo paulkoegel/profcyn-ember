@@ -1,1 +1,24 @@
-%h1 Pages#home
+%script{type: 'text/x-handlebars', :'data-template-name' => 'application'}
+  <h1>Galleries</h1>
+  <hr>
+  <p>{{outlet}}</p>
+  </div>
+  </div>
+
+%script{type: 'text/x-handlebars', :'data-template-name' => 'galleries'}
+  -#{{ partial "tableMenu" }}
+  <div>
+  aa
+  {{#each gallery in controller}}
+  i
+  {{gallery.id}}
+  {{/each}}
+  {{ outlet }}
+  </div>
+
+%script{type: 'text/x-handlebars', :'data-template-name' => 'gallery'}
+  <h2>Gallery <span>{{ title }}</span></h2>
+
+
+%script{type: 'text/x-handlebars', :'data-template-name' => 'galleries/index'}
+  <h2>Select a table at left</h2>
