@@ -1,2 +1,3 @@
-json.title @gallery.title
-json.images_count @gallery.images.count
+json.gallery do
+  json.partial! 'galleries/gallery', gallery: @gallery
+end
