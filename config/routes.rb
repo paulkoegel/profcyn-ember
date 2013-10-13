@@ -1,4 +1,15 @@
 ProfCyn::Application.routes.draw do
+
+  root to: 'pages#home'
+
+  resources :galleries, only: [:show, :create]
+
+  # resources :pages, only: [] do
+  #   collection do
+  #     get :home
+  #   end
+  # end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

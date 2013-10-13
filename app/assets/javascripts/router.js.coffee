@@ -1,5 +1,13 @@
-# For more information see: http://emberjs.com/guides/routing/
+ProfCyn.Router.map ->
+  @resource 'galleries', ->
+    @resource 'gallery', { path: ':gallery_id' }
 
-ProfCyn.Router.map ()->
-  # @resource('posts')
+ProfCyn.IndexRoute = Ember.Route.extend
+  # model: ->
+  #   console.log 'aaa'
+  redirect: ->
+    @transitionTo 'galleries'
 
+ProfCyn.GalleriesRoute = Ember.Route.extend
+  model: ->
+    ProfCyn.Gallery.find()
