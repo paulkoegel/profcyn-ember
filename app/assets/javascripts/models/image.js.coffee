@@ -1,1 +1,1 @@
-ProfCyn.Image = DS.Model.extend()
+App.Image = DS.Model.extend()

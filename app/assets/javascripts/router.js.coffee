@@ -1,13 +1,13 @@
-ProfCyn.Router.map ->
+App.Router.map ->
   @resource 'galleries', ->
     @resource 'gallery', { path: ':gallery_id' }
 
-ProfCyn.IndexRoute = Ember.Route.extend
+App.IndexRoute = Ember.Route.extend
   # model: ->
   #   console.log 'aaa'
   redirect: ->
     @transitionTo 'galleries'
 
-ProfCyn.GalleriesRoute = Ember.Route.extend
+App.GalleriesRoute = Ember.Route.extend
   model: ->
-    ProfCyn.Gallery.find()
+    App.Gallery.find()

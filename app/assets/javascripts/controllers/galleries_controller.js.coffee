@@ -1,2 +1,2 @@
-ProfCyn.GalleriesController = Ember.ArrayController.extend
+App.GalleriesController = Ember.ArrayController.extend
   sortProperties: ['id']

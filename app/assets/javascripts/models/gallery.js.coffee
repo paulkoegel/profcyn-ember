@@ -1,2 +1,2 @@
-ProfCyn.Gallery = DS.Model.extend
+App.Gallery = DS.Model.extend
   images: DS.hasMany 'App.Image'

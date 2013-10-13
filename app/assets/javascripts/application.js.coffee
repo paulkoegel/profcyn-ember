@@ -7,6 +7,6 @@
 #= require_self
 #= require prof_cyn
 
-window.ProfCyn = Ember.Application.create()
+window.App = Ember.Application.create()
 
 #= require_tree .
