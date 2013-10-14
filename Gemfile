@@ -19,7 +19,7 @@ gem 'haml-rails'
 
 # frontend/stylesheets
 gem 'sass-rails'
-gem 'compass-rails', github: 'milgner/compass-rails', branch: 'rails4'
+gem 'compass-rails', '~> 2.0.alpha.0'
 
 # frontend/assets
 gem 'uglifier', '>= 1.3.0'

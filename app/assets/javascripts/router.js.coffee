@@ -7,5 +7,13 @@ App.IndexRoute = Ember.Route.extend
     @transitionTo 'galleries'
 
 App.GalleriesRoute = Ember.Route.extend
+  # setupController: (controller, model) ->
+  #   controller.set 'model', model
   model: ->
-    App.Gallery.find()
+    console.log galleries = App.Gallery.find()
+    return galleries
+
+App.GalleriesIndexRoute = Ember.Route.extend
+  setupController: ->
+    galleries = App.Gallery.find()
+    @controllerFor('galleries').set('galleries', galleries)
