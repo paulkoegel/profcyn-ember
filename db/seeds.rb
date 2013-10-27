@@ -18,3 +18,5 @@ random_image_paths = Dir['/Users/paul/Pictures/images/*.png', '/Users/paul/Pictu
   filename = full_filename.split('.').first
   image = gallery.images.create(url: "http://localhost:8000/#{full_filename}", title: filename)
 end
+
+gallery = Gallery.create title: 'Hong Kong'

@@ -8,11 +8,10 @@
 %script{type: 'text/x-handlebars', :'data-template-name' => 'galleries'}
   -#{{ partial "tableMenu" }}
   <div>
-  aa
   {{#each gallery in controller}}
-  i
   {{gallery.id}}
   {{gallery.title}}
+  <br>
   {{/each}}
   {{ outlet }}
   </div>
