@@ -10,13 +10,15 @@ App.IndexRoute = Ember.Route.extend
   redirect: ->
     @transitionTo 'galleries'
 
-App.GalleryRoute = Ember.Route.extend
-  model: (params) ->
-    @store.find 'gallery', params.gallery_id
-
 App.GalleriesRoute = Ember.Route.extend
   model: ->
-    App.Gallery.find()
+    console.log 'galleriesRoute'
+    window.galleries = App.Gallery.find()
+
+App.GalleryRoute = Ember.Route.extend
+  model: (params) ->
+    console.log 'galleryRoute'
+    App.Gallery.find(params.gallery_id)
 
 App.GalleriesIndexRoute = Ember.Route.extend
   setupController: (controller, model) ->
