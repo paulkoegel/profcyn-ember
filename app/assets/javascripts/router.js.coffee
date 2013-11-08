@@ -13,7 +13,7 @@ App.IndexRoute = Ember.Route.extend
 App.GalleriesRoute = Ember.Route.extend
   model: ->
     console.log 'galleriesRoute'
-    window.galleries = App.Gallery.find()
+    window.galleries = @store.find('gallery') # findAll doesn't work
 
 App.GalleryRoute = Ember.Route.extend
   model: (params) ->
