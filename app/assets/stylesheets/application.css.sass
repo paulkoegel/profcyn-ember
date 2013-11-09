@@ -16,7 +16,7 @@ body
   padding: 0
   background: #222 //#fafafa
   margin: 0 auto
-  padding: 50px
+  padding: 10%
 
 $columns: 3
 .image-container
@@ -25,20 +25,17 @@ $columns: 3
   margin: 0 auto
   //+pie-clearfix
   +column-count($columns)
-  +column-gap(10px)
+  +column-gap(20px)
   @media only all and (min-width: 481px) and (max-width: 800px)
     +column-count($columns - 1)
 
 .image
   +column-break-inside(avoid)
-  background: #333
-  height: round(100.0 / (1.2*$columns)) * 1vw
-  background-repeat: no-repeat
+  background: #222
   margin-bottom: 10px
   padding: 0
   overflow: hidden
-  background-size: cover
-  background-position: center center
   +box-shadow(rgba(#000, 0.3) 3px 3px 4px)
-  &.vertical
-    height: round(100.0 / (1.2*$columns)) * 2vw
+  //height: round(100.0 / (1.2*$columns)) * 1vw
+  // &.vertical
+  //   height: round(100.0 / (1.2*$columns)) * 2vw
