@@ -12,7 +12,7 @@ end
 
 gallery = Gallery.create title: 'Awesome Gallery'
 
-random_image_paths = Dir['/Users/paul/Pictures/images/*.png', '/Users/paul/Pictures/images/*.jpg'].shuffle
+random_image_paths = Dir["/Users/#{ENV['USER']}/Pictures/images/*.png", "/Users/#{ENV['USER']}/Pictures/images/*.jpg"].shuffle
 60.times do |counter|
   full_filename = random_image_paths[counter].split('/').last
   filename = full_filename.split('.').first
