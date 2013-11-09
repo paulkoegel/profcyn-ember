@@ -2,6 +2,7 @@
   <h1>Galleries</h1>
   <hr>
   <p>{{outlet}}</p>
+  <hr>
   </div>
   </div>
 
@@ -15,15 +16,16 @@
   {{/link-to}}
   <br>
   {{/each}}
+  \--- START GALLERY CONTENT ---
   {{ outlet }}
+  \--- END GALLERY CONTENT ---
   </div>
 
 %script{type: 'text/x-handlebars', :'data-template-name' => 'gallery'}
   <h2>Gallery <span>{{ title }}</span></h2>
   {{#each image in images}}
-  {{image}}
   {{image.title}}
-  {{!--<div class="image"><img src="{{image.url}}"></div>--}}
+  <div class="image"><img {{bindAttr src="image.url"}}></div>
   {{/each}}
 
 %script{type: 'text/x-handlebars', :'data-template-name' => 'galleries/index'}
