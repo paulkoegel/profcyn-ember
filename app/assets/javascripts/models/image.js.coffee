@@ -1,3 +1,4 @@
 App.Image = DS.Model.extend
-  url: DS.attr()
+  gallery: DS.belongsTo('gallery')
   title: DS.attr()
+  url: DS.attr()
