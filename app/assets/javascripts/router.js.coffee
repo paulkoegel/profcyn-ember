@@ -1,6 +1,6 @@
 App.Router.map ->
   @resource 'galleries', ->
-    @resource 'gallery', { path: ':gallery_id' }
+    @resource 'gallery', { path: '/:gallery_id' }
 
 # special route: "App.ApplicationRoute is entered when your app first boots up. It renders the application template."
 # App.ApplicationRoute = Ember.Route.extend
