@@ -1,3 +1,3 @@
 json.galleries do
-  json.partial! 'galleries/gallery', collection: @galleries, as: :gallery
+  json.partial! 'galleries/index_gallery', collection: @galleries, as: :gallery
 end
