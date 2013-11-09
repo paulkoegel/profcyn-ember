@@ -1,0 +1,4 @@
+### Setup
++ `rake db:seed`
++ start a server from the image folder specified in seeds.db on port 8000
++ click on a gallery, look at all those beautiful images in thumbnail size ^^ 
