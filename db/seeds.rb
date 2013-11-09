@@ -10,13 +10,23 @@ if Rails.env.development?
   end
 end
 
-gallery = Gallery.create title: 'Awesome Gallery'
+galleries = [ Gallery.create(title: 'Taiwan Hong Kong', year: 2013, month: 4),
+              Gallery.create(title: 'Urban Exploration', year: 2012) ]
 
-random_image_paths = Dir["/Users/#{ENV['USER']}/Pictures/images/*.png", "/Users/#{ENV['USER']}/Pictures/images/*.jpg"].shuffle
-60.times do |counter|
-  full_filename = random_image_paths[counter].split('/').last
-  filename = full_filename.split('.').first
-  image = gallery.images.create(url: "http://localhost:8000/#{full_filename}", title: filename)
+%w(taiwan_hong_kong_2013 urban_exploration_2012).each_with_index do |folder, index|
+  image_paths = Dir["#{Dir.home}/Pictures/images/#{folder}/*.jpg"]
+
+  image_paths.each do |image_path|
+    file = File.new(image_path)
+
+    full_filename = image_path.split('/').last
+    filename = full_filename.split('.').first
+    image = galleries[index].images.create( title: filename,
+                                            url:           "http://localhost:8000/#{folder}/#{ERB::Util.url_encode full_filename}",
+                                            thumbnail_url: "http://localhost:8000/#{folder}/thumbs/#{ERB::Util.url_encode full_filename}",
+                                            width:  Dimensions.width(file),
+                                            height: Dimensions.height(file),
+                                            sha:    Digest::SHA256.hexdigest(file.read)
+                                          )
+  end
 end
-
-gallery = Gallery.create title: 'Hong Kong'

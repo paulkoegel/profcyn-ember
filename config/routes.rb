@@ -2,7 +2,9 @@ ProfCyn::Application.routes.draw do
 
   root to: 'pages#home'
 
-  resources :galleries, only: [:show, :create, :index]
+  resources :galleries, only: [:show, :index]
+
+  resources :static_galleries, only: [:show, :index]
 
   # resources :pages, only: [] do
   #   collection do

@@ -49,6 +49,7 @@ end
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'dimensions' # pure Ruby implementation to retrieve image files' dimension
   gem 'quiet_assets'
 end
 

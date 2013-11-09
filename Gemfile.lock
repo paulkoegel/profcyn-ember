@@ -83,6 +83,7 @@ GEM
     debugger-linecache (1.2.0)
     debugger-ruby_core_source (1.2.3)
     diff-lcs (1.2.4)
+    dimensions (1.2.0)
     ember-data-source (0.14)
       ember-source
     ember-rails (0.14.0)
@@ -257,6 +258,7 @@ DEPENDENCIES
   coffee-rails
   compass-rails (~> 2.0.alpha.0)
   database_cleaner
+  dimensions
   ember-rails
   ember-source (~> 1.1.2)
   execjs
