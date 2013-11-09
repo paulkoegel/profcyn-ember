@@ -10,7 +10,7 @@
   <div>
   {{#each gallery in controller}}
   {{gallery.id}}
-  {{#link-to 'gallery' this}}
+  {{#link-to 'gallery' gallery}}
   {{gallery.title}}
   {{/link-to}}
   <br>
@@ -20,6 +20,9 @@
 
 %script{type: 'text/x-handlebars', :'data-template-name' => 'gallery'}
   <h2>Gallery <span>{{ title }}</span></h2>
+  {{#each url in images}}
+  <div class="image"><img src="{{url}}"></div>
+  {{/each}}
 
 %script{type: 'text/x-handlebars', :'data-template-name' => 'galleries/index'}
   <h2>Select a table at left</h2>
