@@ -10,9 +10,9 @@ gem 'pg'
 # authentication
 # gem 'sorcery'
 
-gem 'ember-rails'
-gem 'ember-source', '~> 1.1.2' # or the version you need
-gem 'hamlbars', '~> 2.0'
+# gem 'ember-rails'
+# gem 'ember-source', '~> 1.1.2' # or the version you need
+# gem 'hamlbars', '~> 2.0'
 
 # frontend/markup
 gem 'haml-rails'
