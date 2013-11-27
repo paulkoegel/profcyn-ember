@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-ProfCyn::Application.config.secret_key_base = 'fad239f33a29dc90472bfaa657769b208ef4d51073ca2c95fac5ddff481423f91c7dfafe73b1feeff094c911b97c2e6e54b4f4a98c248767d3feffb6eaaaf772'
+ProfCyn::Application.config.secret_key_base = '56bb9382658a90ac6a87cb151162849b5f2ade05a08ec9021ce1ea729770bc4aa8265d56b2475474582f0c1ef1753b0aba78a1c7bfd3a564335c95d9748aac82'
