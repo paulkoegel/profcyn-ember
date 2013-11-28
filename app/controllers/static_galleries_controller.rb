@@ -1,12 +1,14 @@
 class StaticGalleriesController < ActionController::Base
 
+  layout 'static'
+
   def index
     @galleries = Gallery.all
   end
 
   def show
-    @gallery = Gallery.first #Gallery.find params[:id]
-    render layout: 'static'
+    @gallery = Gallery.find params[:id]
+    @images = @gallery.images.limit(100) || []
   end
 
 end

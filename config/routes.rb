@@ -1,6 +1,6 @@
 ProfCyn::Application.routes.draw do
 
-  root to: 'pages#home'
+  root to: 'static_galleries#index'
 
   resources :galleries, only: [:show, :index]
 

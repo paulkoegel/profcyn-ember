@@ -1,0 +1,4 @@
+%h1 Galleries
+%ul
+  - @galleries.each do |gallery|
+    %li= link_to gallery.title, static_gallery_path(gallery)
